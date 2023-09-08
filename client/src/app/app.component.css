@@ -1,0 +1,39 @@
+
+
+li {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 16px;
+  margin: 8px 0;
+}
+
+.column {
+  flex: 1;
+  padding: 0 8px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Style for header columns */
+.header-column {
+  font-weight: bold;
+  border-bottom: 2px solid;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Style for data columns */
+.column {
+  border: 1px solid;
+  padding: 8px;
+  text-align: center;
+}

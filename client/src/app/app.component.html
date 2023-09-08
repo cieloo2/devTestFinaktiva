@@ -1,0 +1,60 @@
+<h1>Log viewer</h1>
+
+<input id="newNotes" />
+<button (click)="queryMethod()">Insert method</button>
+
+<div class="form-group">
+  <label for="startDate">Start Date</label>
+  <input
+    type="text"
+    class="form-control"
+    id="startDate"
+    placeholder="Select start date"
+    bsDatepicker
+  />
+</div>
+
+<div class="form-group">
+  <label for="finishDate">Finish Date</label>
+  <input
+    type="text"
+    class="form-control"
+    id="finishDate"
+    placeholder="Select finish date"
+    bsDatepicker
+  />
+</div>
+
+<ul>
+  <li>
+    <div class="header-column">Primary Key</div>
+    <div class="header-column">Time</div>
+    <div class="header-column">Endpoint</div>
+    <div class="header-column">Method</div>
+    <div class="header-column">Request</div>
+    <div class="header-column">Response</div>
+    <!-- Add more header columns as needed -->
+  </li>
+  <ol>
+    <li *ngFor="let note of notes">
+      <div class="column">
+        <h2>{{ note._id }}</h2>
+      </div>
+      <div class="column">
+        <p>{{ note.timestamp }}</p>
+      </div>
+      <div class="column">
+        <p>{{ note.endpoint }}</p>
+      </div>
+      <div class="column">
+        <p>{{ note.method }}</p>
+      </div>
+      <div class="column">
+        <p>{{ note.request }}</p>
+      </div>
+      <div class="column">
+        <p>{{ note.response }}</p>
+      </div>
+    </li>
+  </ol>
+</ul>
